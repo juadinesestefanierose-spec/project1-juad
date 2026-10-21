@@ -1,3 +1,14 @@
+import auditoriumHallImage from "../assets/auditoriumhall.png";
+import conferenceRoomImage from "../assets/conferenceroom.png";
+import presentationRoomImage from "../assets/presentationroom.png";
+import largeMeetingRoomImage from "../assets/largemeetingroom.png";
+import smallMeetingRoomImage from "../assets/smallmeetingroom.png";
+
+import speakerImage from "../assets/speaker.png";
+import microphoneImage from "../assets/micropone.png";
+import whiteboardImage from "../assets/whiteboard.png";
+import projectorImage from "../assets/projector.png";
+import signageImage from "../assets/signage.png";
 import landingPage from "../assets/landingpage.png";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
@@ -22,7 +33,7 @@ const rooms: Product[] = [
     name: "Auditorium Hall",
     category: "Room",
     price: 5500,
-    image: "auditoriumhall.png",
+    image: auditoriumHallImage,
     description: "Capacity: 200 people",
   },
   {
@@ -30,7 +41,7 @@ const rooms: Product[] = [
     name: "Conference Room",
     category: "Room",
     price: 3500,
-    image: "conferenceroom.png",
+    image: conferenceRoomImage,
     description: "Capacity: 15 people",
   },
   {
@@ -38,7 +49,7 @@ const rooms: Product[] = [
     name: "Presentation Room",
     category: "Room",
     price: 700,
-    image: "presentationroom.png",
+    image: presentationRoomImage,
     description: "Capacity: 50 people",
   },
   {
@@ -46,7 +57,7 @@ const rooms: Product[] = [
     name: "Large Meeting Room",
     category: "Room",
     price: 900,
-    image: "largemeetingroom.png",
+    image: largeMeetingRoomImage,
     description: "Capacity: 10 people",
   },
   {
@@ -54,7 +65,7 @@ const rooms: Product[] = [
     name: "Small Meeting Room",
     category: "Room",
     price: 1100,
-    image: "smallmeetingroom.png",
+    image: smallMeetingRoomImage,
     description: "Capacity: 5 people",
   },
 ];
@@ -65,7 +76,7 @@ const addons: Product[] = [
     name: "Speakers",
     category: "Add-on",
     price: 35,
-    image: "speaker.png",
+    image: speakerImage,
     description: "Clear sound for your event",
   },
   {
@@ -73,7 +84,7 @@ const addons: Product[] = [
     name: "Microphones",
     category: "Add-on",
     price: 45,
-    image: "micropone.png",
+    image: microphoneImage,
     description: "For speakers and presenters",
   },
   {
@@ -81,7 +92,7 @@ const addons: Product[] = [
     name: "Whiteboards",
     category: "Add-on",
     price: 80,
-    image: "whiteboard.png",
+    image: whiteboardImage,
     description: "For notes and brainstorming",
   },
   {
@@ -89,7 +100,7 @@ const addons: Product[] = [
     name: "Projectors",
     category: "Add-on",
     price: 200,
-    image: "projector.png",
+    image: projectorImage,
     description: "Display your presentations",
   },
   {
@@ -97,7 +108,7 @@ const addons: Product[] = [
     name: "Signage",
     category: "Add-on",
     price: 80,
-    image: "signage.png",
+    image: signageImage,
     description: "Guide guests around the venue",
   },
 ];
@@ -179,10 +190,10 @@ function Planner() {
           <article className="planner-card" key={product.id}>
             {product.image ? (
               <div className="planner-card-image">
-                <img
-                  src={`/src/assets/${product.image}`}
-                  alt={product.name}
-                />
+               <img
+  src={product.image}
+  alt={product.name}
+/>
               </div>
             ) : (
               <div className="planner-meal-icon">✳</div>
