@@ -190,10 +190,16 @@ function Planner() {
           <article className="planner-card" key={product.id}>
             {product.image ? (
               <div className="planner-card-image">
-               <img
-  src={product.image}
-  alt={product.name}
-/>
+               {product.image ? (
+  <div className="planner-card-image">
+    <img
+      src={product.image}
+      alt={product.name}
+    />
+  </div>
+) : (
+  <div className="planner-meal-icon">✳</div>
+)}
               </div>
             ) : (
               <div className="planner-meal-icon">✳</div>
