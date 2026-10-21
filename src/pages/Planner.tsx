@@ -189,8 +189,6 @@ function Planner() {
         return (
           <article className="planner-card" key={product.id}>
             {product.image ? (
-              <div className="planner-card-image">
-               {product.image ? (
   <div className="planner-card-image">
     <img
       src={product.image}
@@ -200,10 +198,6 @@ function Planner() {
 ) : (
   <div className="planner-meal-icon">✳</div>
 )}
-              </div>
-            ) : (
-              <div className="planner-meal-icon">✳</div>
-            )}
 
             <div className="planner-card-content">
               <p className="planner-card-category">
